@@ -12,4 +12,5 @@ fn main() {
     println!("d = {}, size of d = {}", d, mem::size_of_val(&d));
     let e : bool = true;
     println!("e = {}, size of e = {}", e, mem::size_of_val(&e));
+    
 }
