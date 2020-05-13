@@ -6,3 +6,4 @@ loops
 match_demo
 struct_demo
 enum_demo
+union_demo
