@@ -7,3 +7,7 @@ match_demo
 struct_demo
 enum_demo
 union_demo
+options_demo
+array_demo
+slice_demo
+tuples_demo
