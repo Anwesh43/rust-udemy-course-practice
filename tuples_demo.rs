@@ -14,4 +14,6 @@ fn main() {
     let ((a1, a2), (a3, a4)) = spsp1;
     println!("a1 is {}, a2 is {}, a3 is {}, a4 is {}", a1, a2, a3, a4);
     println!("value of a1 is {}", (spsp1.0).0);
+    let k = (42, );
+    println!("{:?}", k);
 }
