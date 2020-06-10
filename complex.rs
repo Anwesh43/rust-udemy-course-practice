@@ -1,5 +1,5 @@
 use std::fmt::Display;
-use std::ops::Add;
+use std::ops::{Add, Neg};
 
 struct Complex<T> {
     re : T,
@@ -24,6 +24,13 @@ impl<T> Add for Complex<T> where T : Add<Output = T> + Display {
     }
 }
 
+impl<T> Neg for Complex<T> where T : Neg<Output=T> + Display {
+    type Output = Complex<T>;
+    fn neg(self) -> Self::Output {
+        return Complex::new(self.re.neg(), self.im.neg());
+    }
+}
+
 fn main() {
     let comp1  = Complex::new(2, 3);
     let comp2 : Complex<f32> = Complex::new(3.2, 4.3);
@@ -36,4 +43,5 @@ fn main() {
     comp13.to_string();
     let comp24 = comp2 + comp4;
     comp24.to_string();
+    comp24.neg().to_string();
 }
